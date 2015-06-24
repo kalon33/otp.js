@@ -15,7 +15,8 @@
   },
   "development": {},
   "local": [
-    "leaflet.label"
+    "leaflet.label",
+    "jed"
   ],
   "paths": [
     "local"
@@ -25,6 +26,7 @@
     "lib/geocoder.js",
     "lib/index.js",
     "lib/log.js",
+    "lib/localization.js",
     "lib/models.js",
     "lib/bike_views.js",
     "lib/map_views.js",
@@ -39,6 +41,13 @@
     "lib/map.css",
     "lib/request-form.css",
     "lib/topo.css"
+  ],
+  "json" : [
+    "lib/locale/en.json",
+    "lib/locale/fr.json",
+    "lib/locale/sl.json",
+    "lib/locale/de.json",
+    "lib/locale/ca_ES.json"
   ],
   "images": [
     "lib/images"
