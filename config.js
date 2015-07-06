@@ -12,5 +12,9 @@ window.OTP_config = {
 
   //Here should be all languages that we have translations for
   //Order doesn't matter
-  availible_languages: {"de":true, "fr":true, "it":true, "sl":true, "en":true}
+  availible_languages: {"de":true, "fr":true, "it":true, "sl":true, "en":true},
+
+  cookieName: "wanted_language",
+
+  langQS: "setLng"
 };
