@@ -1,9 +1,10 @@
 {
   "name": "otpjs",
-  "version": "0.10.0",
+  "version": "0.13.1",
   "description": "A lightweight library for modular development of modern OpenTripPlanner front-end interfaces",
   "keywords": [],
   "author": "Conveyal",
+  "license": "MIT",
   "homepage": "http://conveyal.com/",
   "repository": {
     "type": "git",
@@ -12,9 +13,12 @@
   "devDependencies": {
     "component": "*",
     "component-uglifyjs": "*",
-    "jshint": "*"
+    "serve": "^1.4.0",
+    "standard": "*"
   },
   "scripts": {
-    "test": "make lint"
+    "start": "serve client",
+    "format": "standard --format lib/*.js client.js config.js index.js",
+    "lint": "standard --verbose lib/*.js client.js config.js index.js"
   }
 }

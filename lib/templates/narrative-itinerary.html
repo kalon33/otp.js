@@ -7,7 +7,7 @@
 	{{!-- TRANSLATORS: One returned itinerary in narrative (Option 1, Option 2) You can choose among different ones--}}
     {{_ "Option"}} {{index}}:
     {{#each legs}}
-    <nobr>
+    <nobr {{#if attributes.routeColor }}style="background-color:#{{attributes.routeColor}};color:#{{attributes.routeTextColor}};"{{/if}}>
       <div class="otp-legMode-icon otp-legMode-icon-{{ attributes.mode }}"></div>
       {{#if attributes.routeShortName }}{{attributes.routeShortName}}{{/if}}
       {{#unless @last}}

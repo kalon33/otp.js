@@ -1,7 +1,5 @@
 
-BEAUTIFY = js-beautify
 COMPONENT = component
-JSHINT = jshint
 SERVE = serve
 #localization
 JSEXTRACT=../jsxgettext/lib/cli.js
@@ -19,7 +17,7 @@ JS := $(shell find lib -name '*.js' -print)
 PORT = 3000
 
 build: components $(JS)
-	@$(COMPONENT) build --dev
+	@$(COMPONENT) build --dev --out client/build
 
 clean:
 	rm -rf build components node_modules
@@ -28,19 +26,13 @@ components: component.json
 	@$(COMPONENT) install --dev
 
 install: node_modules
-	@npm install -g component js-beautify jshint myth serve
-
-beautify: $(JS)
-	@$(BEAUTIFY) --replace $(JS)
-
-lint: $(JS)
-	@$(JSHINT) --verbose $(JS)
+	@npm install -g component myth serve
 
 node_modules: package.json
 	@npm install
 
 server:
-	@$(SERVE) --port $(PORT)
+	@$(SERVE) client --port $(PORT)
 
 watch:
 	watch $(MAKE) build
@@ -67,6 +59,4 @@ update_po: $(LOCALE_FILES)
 $(LOCALE_FILES): $(TEMPLATE_FILE)
 	for LAN in $(LANGS); do msgmerge -U $(LOCALE_FOLDER)/"$$LAN.po" $(TEMPLATE_FILE) ; done
 
-.PHONY: beautify build clean install lint release server watch extract update_js update_po
-
-print-%: ; @echo $*=$($*)
+.PHONY: build clean install server watch extract update_js update_po
