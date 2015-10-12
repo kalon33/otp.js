@@ -156,7 +156,7 @@ window.OTP_config = {
   langQS: "setLng"
 
   // geocoders to use:
-  geocoders: [ 'mapbox' ], // possible choices: esri, otp, nominatim, pelias, mapbox
+  geocoders: [ 'esri' ], // possible choices: esri, otp, nominatim, pelias, mapbox
   reverseGeocoder: 'esri', // possible choices: esri, nominatim, pelias, mapbox
   reverseGeocode: true,
 
