@@ -163,4 +163,5 @@ window.OTP_config = {
   // geocoder api endpoints
   nominatimApi: 'https://nominatim.openstreetmap.org/',
   esriApi: 'https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/',
+  peliasApi: 'https://pelias.mapzen.com/',
 }
