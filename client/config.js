@@ -8,6 +8,16 @@ window.OTP_config = {
 
   otpApi: 'http://192.168.59.103:8080/otp/routers/',
 
+  // geocoders to use:
+  geocoders: [ 'esri' ], // possible choices: esri, otp, nominatim, pelias, mapbox
+  reverseGeocoder: 'esri', // possible choices: esri, nominatim, pelias, mapbox
+  reverseGeocode: true,
+
+  // geocoder api endpoints
+  nominatimApi: 'https://nominatim.openstreetmap.org/',
+  esriApi: 'https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/',
+  peliasApi: 'https://pelias.mapzen.com/',
+
   //Here should be all languages that we have translations for
   //Order doesn't matter
   availible_languages: {
@@ -155,13 +165,4 @@ window.OTP_config = {
 
   langQS: "setLng"
 
-  // geocoders to use:
-  geocoders: [ 'esri' ], // possible choices: esri, otp, nominatim, pelias, mapbox
-  reverseGeocoder: 'esri', // possible choices: esri, nominatim, pelias, mapbox
-  reverseGeocode: true,
-
-  // geocoder api endpoints
-  nominatimApi: 'https://nominatim.openstreetmap.org/',
-  esriApi: 'https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/',
-  peliasApi: 'https://pelias.mapzen.com/',
 }
