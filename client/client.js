@@ -28,7 +28,7 @@ $(document).ready(function () {
   var log = OTP.log('client')
 
   // set up the leafet map object
-  var map = L.map('map').setView(window.OTP_config.initLatLng, (window.OTP_config.initZoom || 13))
+  var map = L.map('map').setView(window.OTP_config.initLatLng, (window.OTP_config.initZoom || 10))
   map.attributionControl.setPrefix('')
 
   // create OpenStreetMap tile layers for streets and aerial imagery
@@ -61,7 +61,7 @@ $(document).ready(function () {
   // create a data model for the currently visible stops, and point it
   // to the corresponding API method
   var stopsRequestModel = new OTP.StopsInRectangleRequest()
-  stopsRequestModel.urlRoot = window.OTP_config.otpApi + 'default/index/stops'
+  stopsRequestModel.urlRoot = window.OTP_config.otpApi + 'paris/index/stops'
 
   // create the stops request view, which monitors the map and updates the
   // bounds of the visible stops request as the viewable area changes
@@ -81,7 +81,7 @@ $(document).ready(function () {
 
   // create the main OTP trip plan request model and point it to the API
   var requestModel = new OTP.PlanRequest()
-  requestModel.urlRoot = window.OTP_config.otpApi + 'default/plan'
+  requestModel.urlRoot = window.OTP_config.otpApi + 'paris/plan'
 
   // create and render the main request view, which displays the trip
   // preference form
