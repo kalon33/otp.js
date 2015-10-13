@@ -63,17 +63,17 @@
       <div class="col-sm-8">
         <select id="mode" class="apiParam form-control" placeholder="Arrive">
 			{{! TRANSLATORS: Public transit transport mode. (Used in selection in Travel Options widgets)}}
-          <option value="TRANSIT&WALK" selected>{{_ "Transit"}}</option>
+          <option value="TRANSIT,WALK" selected>{{_ "Transit"}}</option>
 		  {{! TRANSLATORS: Rail like transport mode (train, subway, tram etc.}}
-          <option value="TRAINISH&WALK">{{_ "Rail Only"}}</option>
+          <option value="TRAINISH,WALK">{{_ "Rail Only"}}</option>
 		  {{! TRANSLATORS: Bus travel mode (Used in selection in Travel Options widgets) }}
-          <option value="BUS&WALK">{{_ "Bus Only"}}</option>
+          <option value="BUS,WALK">{{_ "Bus Only"}}</option>
 		  {{! TRANSLATORS: Walking travel mode (Used in selection in Travel Options widgets) }}
           <option value="WALK">{{_ "Walk Only"}}</option>
 		  {{! TRANSLATORS: Cycling travel mode (Used in selection in Travel Options widgets) }}
           <option value="BICYCLE">{{_ "Bicycle Only"}}</option>
 		  {{! TRANSLATORS: Cycling and public transit travel mode (Used in selection in Travel Options widgets) }}
-          <option value="TRANSIT&BICYCLE">Transit &amp; Bike</option>
+          <option value="TRANSIT,BICYCLE">Transit &amp; Bike</option>
         </select>
       </div>
     </div>
