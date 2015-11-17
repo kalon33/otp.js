@@ -1,12 +1,12 @@
 window.OTP_config = {
-  initLatLng: [38.880148, -77.105933],
-
+  initLatLng: [48.8588589, 2.3475569],
+  routerId: "paris",
   osmMapKey: 'conveyal.ikck6888', // temporary -- do not use in production, provide your own
   aerialMapKey: 'conveyal.map-a3mk3jug', // unset
 
   // mapboxAccessToken: 'Change this to your mapbox public token (starts with pk) if you want to use the mapbox geocoder',
 
-  otpApi: 'http://192.168.59.103:8080/otp/routers/',
+  otpApi: 'http://paris.acolytesanonymes.org/otp/routers/',
 
   // geocoders to use:
   geocoders: [ 'esri' ], // possible choices: esri, otp, nominatim, pelias, mapbox
